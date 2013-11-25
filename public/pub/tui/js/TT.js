@@ -1,9 +1,9 @@
 var $tt = {
 		//提示信息类型
 		MSG_TYPE_INFO : "info",
-		MSG_TYPE_WARN : "warning",
-		MSG_TYPE_ERROR : "error",
-		MSG_TYPE_QUEST : "question",
+		MSG_TYPE_WARN : "warn",
+		MSG_TYPE_ERROR : "err",
+		MSG_TYPE_QUEST : "quest",
         //默认标题名称
         TITLE_MSG_DEF : "系统提示",
         TITLE_INFO : "系统信息",

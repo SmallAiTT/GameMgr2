@@ -27,6 +27,9 @@ app.use(express.cookieParser('keyboard cat'));
 app.use(express.session({ cookie: { maxAge: 60000 }}));
 app.use(flash());
 
+require("./pub/msg/MsgHandler")(app);
+require("./pub/db/DbClientFactory")(app);//初始化连接池
+
 //app.use(express.cookieParser());
 //app.use(express.session({ secret: "keyboard cat", store: new RedisStore }));
 //app.use(flash());
