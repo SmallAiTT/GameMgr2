@@ -27,10 +27,6 @@ module.exports = function(app){
         res.redirect('/user');//登陆成功后跳转到主页
     });
 
-    app.get("/demo/*", function(req, res){
-        res.render(req.url.substring(1), {});
-    });
-
     function checkLogin(req, res, next) {
         if (!req.session.user) {
             req.flash('error', '未登录!');
@@ -46,4 +42,9 @@ module.exports = function(app){
         }
         next();
     }
+
+
+
+    var demoCtrlIndex = require("../modules/demo/ctrl");
+    demoCtrlIndex(app);
 };
