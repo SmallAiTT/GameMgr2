@@ -3,10 +3,8 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
 var http = require('http');
 var path = require('path');
-//var RedisStore = require('connect-redis')(express);
 var flash = require('connect-flash');
 
 var app = express();
@@ -27,8 +25,6 @@ app.use(express.cookieParser('keyboard cat'));
 app.use(express.session({ cookie: { maxAge: 60000 }}));
 app.use(flash());
 
-require("./pub/db/DbClientFactory")(app);//初始化连接池
-
 //app.use(express.cookieParser());
 //app.use(express.session({ secret: "keyboard cat", store: new RedisStore }));
 //app.use(flash());
@@ -41,7 +37,7 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-routes(app);
+require("./app/boot")(app);
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));

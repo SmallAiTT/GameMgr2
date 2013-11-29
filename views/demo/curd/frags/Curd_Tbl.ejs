@@ -1,0 +1,19 @@
+<table class="tt-tbl" rownumbers="true" singleSelect="true" pagination="true"
+	titles="q:Curd列表"
+	btnExps="
+		c:jq->$[dlg];u|r:jq->$[dlg]?*;
+		d:act->/demo/curdCtrl/del?id
+		"
+	acts="q:/demo/curdCtrl/list"
+	
+	>
+     <thead>
+       <tr>
+         <th field="id" width="100" hidden="true">ID</th>
+         <th field="code" width="100" sortable="true">代码</th>
+         <th field="name" width="100" sortable="true">名称</th>
+         <th field="sex" width="100">性别</th>
+         <th field="date" width="100">日期</th>
+       </tr>
+     </thead>
+</table>
