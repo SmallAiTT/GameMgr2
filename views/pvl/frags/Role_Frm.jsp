@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<form class="tt-frm" 
-	acts="c:pvl/RoleCtrl/create;u:pvl/RoleCtrl/update">
+<form class="tt-frm"
+	acts="c:/pvl/RoleCtrl/create;u:pvl/RoleCtrl/update">
 	<input class="tt-fld" name="id" type="hidden">
 	<table>
 		<tr>

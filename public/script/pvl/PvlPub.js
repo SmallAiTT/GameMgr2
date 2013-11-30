@@ -11,7 +11,7 @@ var PvlSel = {
 		},{
 			value : "SHED", text : "大棚模块"
 		},{
-			value : "DEMO", text : "DEMO模块"
+			value : "MODULE", text : "DEMO模块"
 		}]
 };
 
