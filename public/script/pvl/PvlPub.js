@@ -7,7 +7,7 @@ var PvlSel = {
 			value : "btn", text : "按键"
 		}],
 		module : [{
-			value : "PVL", text : "权限模块"
+			value : "PORTAL", text : "权限模块"
 		},{
 			value : "SHED", text : "大棚模块"
 		},{
